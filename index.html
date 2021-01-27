@@ -1,39 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="./src/css/styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive pricing component</title>
+    <title>Frontend Mentor | Interactive pricing component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="main">
+      <div class="container">
+        <div class="header-row">
+          <h2>Simple, traffic-based pricing</h2>
+          <h3>
+            Sign-up for our 30-day trial. <br />
+            No credit card required.
+          </h3>
+        </div>
+        <div class="card">
+          <div class="row card-row">
+            <h4><span id="amount">100K</span> Pageviews</h4>
+            <!-- <h4><span id="amount">100K</span> Pageviews</h4> -->
+            <!-- <div class="range-container"> -->
+            <!-- <input type="range" value="0"> -->
+            <input
+              class="range-slider"
+              type="range"
+              id="slide"
+              name="slide"
+              value="16"
+              step="4"
+              min="8"
+              max="36"
+            />
+            <!-- <input type="range" id="range-slider" min="0" max="100" /> -->
 
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
+            <!-- <div class="range">
+              <input type="range" min="1" max="7" steps="1" value="1" />
+            </div> -->
 
-  Pageviews
-  $ /month
+            <span class="price"
+              ><h1>$</h1>
+              <h1 id="price">16</h1>
+              <span id="per-month">/month</span>
+            </span>
+            <label for="slide"></label>
+            <div class="row">
+              <div class="price-row">
+                <span>Monthly Billing</span>
+                <label class="switch">
+                  <input type="checkbox" name="check" id="check" />
+                  <span class="slider round"></span>
+                </label>
+                <span>Yearly Billing</span>
+                <span class="discount">
+                  <span class="minus">-</span> 25%
+                  <span id="discount"> discount</span>
+                </span>
+              </div>
+            </div>
+            <!-- </div> -->
+          </div>
+          <hr />
+          <div class="row benefits-row">
+            <div class="benefits">
+              <h5>
+                <img src="./images/icon-check.svg" alt="" />Unlimited websites
+              </h5>
+              <h5>
+                <img src="./images/icon-check.svg" alt="" />100% data ownership
+              </h5>
+              <h5><img src="./images/icon-check.svg" alt="" />Email reports</h5>
+            </div>
+            <button class="btn btn-primary">Start my trial</button>
+          </div>
+        </div>
+      </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://ridwanabiola.netlify.app/">Ridwan Abiola</a>.
+      </div>
+    </main>
 
-  Monthly Billing
-  Yearly Billing 25% discount
-
-  Unlimited websites
-  100% data ownership
-  Email reports
-
-  Start my trial
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <script src="./src/js/script.js"></script>
+  </body>
 </html>

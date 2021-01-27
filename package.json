@@ -1,0 +1,28 @@
+{
+  "name": "interactive-pricing-component-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the Interactive pricing component coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "less": "lessc src/less/styles.less src/css/styles.css",
+    "watch:css": "onchange 'src/less/*.less' -- npm run less",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abu-hasib/fem-interactive-pricing-component-main.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abu-hasib/fem-interactive-pricing-component-main/issues"
+  },
+  "homepage": "https://github.com/abu-hasib/fem-interactive-pricing-component-main#readme",
+  "dependencies": {
+    "onchange": "^7.1.0"
+  },
+  "devDependencies": {
+    "less": "^4.1.0"
+  }
+}
