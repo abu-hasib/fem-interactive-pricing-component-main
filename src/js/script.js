@@ -15,7 +15,7 @@ monthlyorYearly.addEventListener("click", function (e) {
 
   if (checked) {
     discount = 25;
-    price.innerHTML = calculateDiscount(rangeSlider.value, discount);
+    price.innerHTML = currentValue - calculateDiscount(rangeSlider.value, discount);
   } else {
     discount = 0;
     price.innerHTML = currentValue;
@@ -28,7 +28,7 @@ rangeSlider.addEventListener("input", function (e) {
   // console.log(rangeSlider[0].value);
   // let sliderValue = rangeSlider[0].value;
   if (discount > 0) {
-    price.innerHTML = calculateDiscount(value, discount);
+    price.innerHTML = value - calculateDiscount(value, discount);
   } else {
     price.innerHTML = value;
   }
