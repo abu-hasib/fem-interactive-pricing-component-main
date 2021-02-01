@@ -5,6 +5,7 @@ const monthlyorYearly = document.querySelector("#check");
 
 var discount = 0;
 var currentValue = 16;
+var values = [8, 12, 16, 24, 36]
 
 const calculateDiscount = (value, discount) => {
   return (discount * value) / 100;
@@ -12,31 +13,44 @@ const calculateDiscount = (value, discount) => {
 
 monthlyorYearly.addEventListener("click", function (e) {
   let { checked } = e.target;
+  // const value = values[this.value]
+
+  // console.log(value)
 
   if (checked) {
     discount = 25;
-    price.innerHTML = currentValue - calculateDiscount(rangeSlider.value, discount);
+    price.innerHTML = currentValue - calculateDiscount(currentValue, discount);
   } else {
     discount = 0;
     price.innerHTML = currentValue;
   }
 });
 
+// rangeSlider.oninput = function() {
+//   console.log(values[this.value])
+//   price.innerHTML = values[this.value]
+// }
+
+// rangeSlider.oninput()
+
 rangeSlider.addEventListener("input", function (e) {
-  const { value } = e.target;
-  currentValue = value;
+//  const value = 
+
+  // const { value } = e.target;
+  currentValue = values[this.value];
   // console.log(rangeSlider[0].value);
   // let sliderValue = rangeSlider[0].value;
   if (discount > 0) {
-    price.innerHTML = value - calculateDiscount(value, discount);
+    price.innerHTML = currentValue - calculateDiscount(currentValue, discount);
   } else {
-    price.innerHTML = value;
+    price.innerHTML = currentValue;
   }
-  getPageviews(value);
+  getPageviews(currentValue);
 });
 
 function getPageviews(value) {
-  switch (value) {
+  // console.log(value)
+  switch (String(value)) {
     case "8":
       amountofViews.innerHTML = "10K";
       break;
