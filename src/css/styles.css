@@ -91,6 +91,9 @@ body {
   border-radius: 5px;
   transition: all 0.3s;
 }
+li {
+  list-style: none;
+}
 .main {
   background: url(../../images/pattern-circles.svg) top center no-repeat, url("../../images/bg-pattern.svg") no-repeat;
   height: 100%;
@@ -260,16 +263,16 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.main .benefits-row .benefits h5 {
+.main .benefits-row .benefits li {
   margin-bottom: 16px;
+}
+.main .benefits-row .benefits li img {
+  margin-right: 8px;
 }
 .main .benefits-row h5 {
   font-weight: 600;
   font-size: 14px;
   margin: 0;
-}
-.main .benefits-row h5 img {
-  margin-right: 8px;
 }
 .main .benefits-row .btn-primary {
   border-radius: 34px;
@@ -278,6 +281,9 @@ body {
   margin-top: 24px;
 }
 @media (max-width: 576px) {
+  .main .card {
+    padding: 0;
+  }
   .main .card-row {
     align-items: center;
   }
@@ -298,8 +304,12 @@ body {
   .main .card-row .price-row .discount #discount {
     display: none;
   }
+  .main .card-row .range-slider {
+    width: 90%;
+  }
   .main .benefits-row {
     justify-content: center;
     text-align: center;
+    flex-direction: column;
   }
 }
